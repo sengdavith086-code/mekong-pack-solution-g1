@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #503b2e;
+}
+
+
+.hero {
+    background: #fdf8f2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px 8%;
+    gap: 30px;
+    min-height: 200px;
+}
+
+.text {
+    width: 55%;
+}
+
+.text h5 {
+    font-size: 9px;
+    margin-bottom: 10px;
+}
+
+.text h1 {
+    font-size: 35px;
+    line-height: 1.15;
+    margin-bottom: 15px;
+}
+
+.text p {
+    font-size: 15px;7776
+    line-height: 1.5;
+    margin-bottom: 10px;
+    display: flex;
+    gap: 30px;
+}
+
+.hero img {
+    width: 60%;
+    height: 450px;
+    
+}
