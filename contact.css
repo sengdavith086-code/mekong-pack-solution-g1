@@ -688,8 +688,7 @@ textarea {
 }
 
 .footer-grid .social-list a:hover {
-  border-color: var(--sun);
-  background: var(--sun);
+  background: white;
   color: var(--footer-bg);
   text-decoration: none;
 }
