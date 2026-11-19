@@ -3,7 +3,6 @@
     --page-bg: #fff9f3;
     --tint: #ffe8d6;
     --section-bg: #ffeedf;
-    --card: #ffffff;
     --hero-from: #ffe8d6;
     --hero-to: #ffcfa6;
     --text: #4a2c1a;
@@ -11,12 +10,6 @@
     --primary: #d35400;
     --primary-dark: #d35400;
     --on-primary: #1a0e05;
-    --input-border: #9c8e82;
-    --error: #ffb4ab;
-    --focus: #8ab4ff;
-    --footer-bg: #0f0a07;
-    --footer-text: #eadfd4;
-    --footer-soft: #b9a999;
   }
 }
 *,
@@ -60,6 +53,7 @@ a {
 }
 
 .container {
+  padding:50px;
   width: 100%;
   margin-inline: auto;
 }
