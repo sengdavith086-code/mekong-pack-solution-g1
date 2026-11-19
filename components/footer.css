@@ -198,6 +198,7 @@ body {
 }
 
 .footer-grid .contact-list a:hover {
+  background: white;
   color: var(--sun);
 }
 
