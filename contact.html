@@ -8,7 +8,6 @@
     <meta name="description"
         content="Ask Mekong Pack Solutions a product question, share your packaging requirements or propose a partnership. Based in Phnom Penh, Cambodia.">
     <meta name="robots" content="index, follow">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="canonical" href="https://www.example.com/contact">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Contact &amp; Partnership | Mekong Pack Solutions">
@@ -17,18 +16,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
-    <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ContactPage",
-    "name": "Contact & Partnership",
-    "about": {
-      "@type": "Organization",
-      "name": "Mekong Pack Solutions",
-      "address": { "@type": "PostalAddress", "addressLocality": "Phnom Penh", "addressCountry": "KH" }
-    }
-  }
-  </script>
     <link rel="stylesheet" href="contact.css">
 </head>
 
@@ -36,10 +23,10 @@
     <header class="site-header">
         <div class="container">
             <a class="brand" href="contact.html">
-                <img class="brand-logo" src="/images/logo.png" alt="Mekong Pack Solutions, home" width="720"
-                    height="179" />
+                <img class="brand-logo" src="images/logo.png" alt="Mekong Pack Solutions, home" width="720"
+                    height="179">
             </a>
-            <nav class="site-nav" aria-label="Main">
+            <nav class="site-nav" id="site-nav" aria-label="Main">
                 <ul>
                     <li><a href="home.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
@@ -47,8 +34,13 @@
                     <li><a href="contact.html">Contact us</a></li>
                 </ul>
             </nav>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false"
+                aria-controls="site-nav">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </header>
+
     <main id="main">
         <section class="page-hero" aria-labelledby="page-title">
             <div class="container hero-inner">
@@ -72,7 +64,8 @@
                         </li>
                     </ol>
                 </div>
-                <img src="/images/hero.png" alt="My Photo" width="500px" height="500px">
+                <img class="hero-art" src="images/hero.png" alt="Packaging from Mekong Pack Solutions" width="500"
+                    height="500">
             </div>
         </section>
 
@@ -84,7 +77,7 @@
 
                     <form id="enquiry-form" action="#" method="post" novalidate>
                         <fieldset>
-                            <legend>Enquiry type <span class="req">(required)</span></legend>
+                            <legend>Enquiry type <span class="req"></span></legend>
                             <div class="segmented">
                                 <input type="radio" id="type-product" name="enquiry-type" value="product" checked>
                                 <label for="type-product">Product enquiry</label>
@@ -95,14 +88,14 @@
 
                         <div class="grid-2">
                             <div class="field">
-                                <label for="full-name">Full name <span class="req">(required)</span></label>
+                                <label for="full-name">Full name <span class="req"></span></label>
                                 <input type="text" id="full-name" name="name" autocomplete="name" required
-                                    placeholder="Enter your full name" aria-describedby="name-hint name-error">
+                                    placeholder="Enter your full name" aria-describedby="name-hint full-name-error">
                                 <span class="hint" id="name-hint">How should we address you?</span>
-                                <span class="error" id="name-error" role="alert"></span>
+                                <span class="error" id="full-name-error" role="alert"></span>
                             </div>
                             <div class="field">
-                                <label for="email">Email <span class="req">(required)</span></label>
+                                <label for="email">Email <span class="req"></span></label>
                                 <input type="email" id="email" name="email" autocomplete="email" required
                                     placeholder="Enter your email" aria-describedby="email-hint email-error">
                                 <span class="hint" id="email-hint">Use an address we can reply to.</span>
@@ -125,7 +118,7 @@
                         </div>
 
                         <div class="field">
-                            <label for="message">Message <span class="req">(required)</span></label>
+                            <label for="message">Message <span class="req"></span></label>
                             <textarea id="message" name="message" required
                                 placeholder="Tell us what you need to pack, dimensions, quantity and intended use."
                                 aria-describedby="message-hint message-error"></textarea>
@@ -146,15 +139,12 @@
                 <aside aria-label="Contact information and tips">
                     <section class="info-card" aria-labelledby="location-title">
                         <h2 id="location-title">Based in Phnom Penh</h2>
-                        <address>
-                            Mekong Pack Solutions<br>
-                            Phnom Penh, Cambodia
-                        </address>
+                        <address>Mekong Pack Solutions<br>Phnom Penh, Cambodia</address>
                         <h3>Contact details</h3>
                         <ul class="todo-list">
                             <li>Email: <a href="mailto:hello@example.com">hello@example.com</a></li>
-                            <li>Phone: <a href="tel:+85500000000">+855 00 000 000</a></li>
-                            <li>Address: [Street address]</li>
+                            <li>Phone: <a href="tel:+855 096 9340291">+855 096 9340291</a></li>
+                            <li>Address: </li>
                             <li>Opening hours: [to be confirmed]</li>
                         </ul>
                     </section>
@@ -196,10 +186,10 @@
                 <nav aria-labelledby="footer-explore">
                     <h2 id="footer-explore">Explore</h2>
                     <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/about">About</a></li>
-                        <li><a href="/products">Products</a></li>
-                        <li><a href="/contact">Contact / Partnership</a></li>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="product.html">Products</a></li>
+                        <li><a href="contact.html">Contact / Partnership</a></li>
                     </ul>
                 </nav>
 
@@ -230,39 +220,27 @@
                     <nav class="social" aria-label="Social media">
                         <h3 class="social-title">Follow us</h3>
                         <ul class="social-list">
-                            <li>
-                                <a href="https://t.me/your-username" target="_blank" rel="noopener noreferrer"
-                                    aria-label="Telegram (opens in a new tab)">
-                                    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"
-                                        focusable="false">
+                            <li><a href="https://t.me/your-username" target="_blank" rel="noopener noreferrer"
+                                    aria-label="Telegram (opens in a new tab)"><svg viewBox="0 0 24 24" width="22"
+                                        height="22" aria-hidden="true" focusable="false">
                                         <path fill="currentColor" fill-rule="evenodd"
                                             d="M21.5 4.5 2.9 11.7c-.9.4-.9 1.6 0 1.9l4.6 1.5 1.8 5.5c.2.7 1.1.9 1.6.4l2.6-2.4 4.7 3.4c.6.4 1.4.1 1.6-.6l3-15.2c.2-.9-.7-1.6-1.5-1.3zM9.1 14.2l8.8-5.5-6.8 6.6-.3 3z" />
-                                    </svg>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://facebook.com/your-page" target="_blank" rel="noopener noreferrer"
-                                    aria-label="Facebook (opens in a new tab)">
-                                    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"
-                                        focusable="false">
+                                    </svg></a></li>
+                            <li><a href="https://facebook.com/your-page" target="_blank" rel="noopener noreferrer"
+                                    aria-label="Facebook (opens in a new tab)"><svg viewBox="0 0 24 24" width="22"
+                                        height="22" aria-hidden="true" focusable="false">
                                         <path fill="currentColor"
                                             d="M13.5 21v-8h2.7l.5-3.2h-3.2V7.9c0-.9.4-1.7 1.8-1.7h1.5V3.4c-.3 0-1.2-.2-2.3-.2-2.4 0-4 1.4-4 4.1v2.5H7.7V13h2.8v8z" />
-                                    </svg>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://tiktok.com/@your-account" target="_blank" rel="noopener noreferrer"
-                                    aria-label="TikTok (opens in a new tab)">
-                                    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"
-                                        focusable="false">
+                                    </svg></a></li>
+                            <li><a href="https://tiktok.com/@your-account" target="_blank" rel="noopener noreferrer"
+                                    aria-label="TikTok (opens in a new tab)"><svg viewBox="0 0 24 24" width="22"
+                                        height="22" aria-hidden="true" focusable="false">
                                         <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
                                             stroke-linejoin="round">
                                             <path d="M14 3v11.2a3.7 3.7 0 1 1-3.7-3.7" />
                                             <path d="M14 3c.4 2.6 2 4.2 4.8 4.4" />
                                         </g>
-                                    </svg>
-                                </a>
-                            </li>
+                                    </svg></a></li>
                         </ul>
                     </nav>
                 </section>
@@ -281,54 +259,7 @@
         </div>
     </footer>
 
-    <script>
-        (function () {
-            var form = document.getElementById("enquiry-form");
-            var status = document.getElementById("form-status");
-            var message = document.getElementById("message");
-            var hints = {
-                product: "Tell us what you need to pack, dimensions, quantity and intended use.",
-                partnership: "Tell us about your organization, what you supply and the collaboration you propose."
-            };
-            try { document.getElementById("year").textContent = new Date().getFullYear(); } catch (e) { }
-
-            document.querySelectorAll("[data-type]").forEach(function (link) {
-                link.addEventListener("click", function () {
-                    var radio = document.getElementById("type-" + link.dataset.type);
-                    if (radio) { radio.checked = true; message.placeholder = hints[radio.value]; }
-                });
-            });
-
-            form.addEventListener("change", function (e) {
-                if (e.target.name === "enquiry-type") message.placeholder = hints[e.target.value];
-            });
-
-            function check(id, text, test) {
-                var el = document.getElementById(id), err = document.getElementById(id + "-error");
-                var ok = test ? test(el.value.trim()) : el.value.trim() !== "";
-                el.setAttribute("aria-invalid", ok ? "false" : "true");
-                err.textContent = ok ? "" : text;
-                return ok;
-            }
-
-            form.addEventListener("submit", function (e) {
-                e.preventDefault();
-                var results = [
-                    check("full-name", "Enter your full name."),
-                    check("email", "Enter an email address we can reply to, like name@example.com.", function (v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }),
-                    check("message", "Tell us what you need so we can reply usefully.")
-                ];
-                if (results.every(Boolean)) {
-                    status.textContent = "Thank you. This is a design example, so your enquiry was not sent.";
-                    form.reset();
-                } else {
-                    status.textContent = "Please fix the highlighted fields and try again.";
-                    var first = form.querySelector('[aria-invalid="true"]');
-                    if (first) first.focus();
-                }
-            });
-        })();
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
